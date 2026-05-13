@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "agents-learn",
   description: "我的agents笔记",
+  base: '/agents-learn/',
   srcDir: './docs',
   appearance: false,
   themeConfig: {
