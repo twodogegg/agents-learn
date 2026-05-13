@@ -5,6 +5,7 @@ export default defineConfig({
   title: "agents-learn",
   description: "我的agents笔记",
   srcDir: './docs',
+  appearance: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -59,9 +60,45 @@ export default defineConfig({
         text: 'Skills',
         items: [
           { text: '总览', link: '/skills/overview' },
+          { text: 'Skill 是什么', link: '/skills/what-is-skill' },
+          { text: 'Skill 结构', link: '/skills/anatomy' },
           { text: '创建 Skill', link: '/skills/create-skill' },
           { text: '使用 Skill', link: '/skills/use-skill' },
-          { text: '示例', link: '/skills/examples' }
+          { text: '分类总览', link: '/skills/categories/overview' },
+          {
+            text: '分类',
+            items: [
+              { text: 'Workflow', link: '/skills/categories/workflow' },
+              { text: 'Coding', link: '/skills/categories/coding' },
+              { text: 'Research', link: '/skills/categories/research' },
+              { text: 'Writing', link: '/skills/categories/writing' },
+              { text: 'Visual', link: '/skills/categories/visual' },
+              { text: 'Browser / Automation', link: '/skills/categories/browser' },
+              { text: 'Office / Document', link: '/skills/categories/office' },
+              { text: 'Knowledge Base', link: '/skills/categories/knowledge-base' },
+              { text: 'Integrations', link: '/skills/categories/integrations' },
+              { text: 'Dangerous / Experimental', link: '/skills/categories/dangerous' }
+            ]
+          },
+          {
+            text: '示例',
+            items: [
+              { text: 'Simple Skill', link: '/skills/examples/simple-skill' },
+              { text: 'Coding Review', link: '/skills/examples/coding-review-skill' },
+              { text: 'Imagegen', link: '/skills/examples/imagegen-skill' },
+              { text: 'Lark', link: '/skills/examples/lark-skill' },
+              { text: 'MCP', link: '/skills/examples/mcp-skill' }
+            ]
+          },
+          {
+            text: '参考',
+            items: [
+              { text: 'Metadata', link: '/skills/reference/metadata' },
+              { text: '目录结构', link: '/skills/reference/directory-structure' },
+              { text: '命名规范', link: '/skills/reference/naming' },
+              { text: '检查清单', link: '/skills/reference/checklist' }
+            ]
+          }
         ]
       },
       {

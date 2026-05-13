@@ -13,7 +13,7 @@ rating: 5
 
 建议模板包含：
 
-```markdown
+````markdown
 # Prompt 名称
 
 ## 用途
@@ -31,5 +31,4 @@ rating: 5
 ## 示例
 
 ## 效果记录
-```
-
+````
