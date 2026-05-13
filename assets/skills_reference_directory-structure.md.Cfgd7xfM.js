@@ -1,0 +1,6 @@
+import{_ as s,o as a,c as t,ae as l}from"./chunks/framework.wXSf16fs.js";const _=JSON.parse('{"title":"Skill 目录结构参考","description":"","frontmatter":{},"headers":[],"relativePath":"skills/reference/directory-structure.md","filePath":"skills/reference/directory-structure.md"}'),n={name:"skills/reference/directory-structure.md"};function i(r,e,p,c,o,d){return a(),t("div",null,[...e[0]||(e[0]=[l(`<h1 id="skill-目录结构参考" tabindex="-1">Skill 目录结构参考 <a class="header-anchor" href="#skill-目录结构参考" aria-label="Permalink to &quot;Skill 目录结构参考&quot;">​</a></h1><p>这里放 skill 目录结构规范。</p><p>推荐：</p><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>skill-name/</span></span>
+<span class="line"><span>  SKILL.md</span></span>
+<span class="line"><span>  scripts/</span></span>
+<span class="line"><span>  templates/</span></span>
+<span class="line"><span>  references/</span></span>
+<span class="line"><span>  assets/</span></span></code></pre></div><p>原则：</p><ul><li>入口必须清楚</li><li>长资料放 <code>references/</code></li><li>可复用脚本放 <code>scripts/</code></li><li>模板放 <code>templates/</code></li><li>不要把所有内容塞进 <code>SKILL.md</code></li></ul>`,6)])])}const m=s(n,[["render",i]]);export{_ as __pageData,m as default};

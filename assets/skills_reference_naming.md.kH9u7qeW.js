@@ -1,0 +1,6 @@
+import{_ as e,o as s,c as n,ae as l}from"./chunks/framework.wXSf16fs.js";const k=JSON.parse('{"title":"Skill 命名规范","description":"","frontmatter":{},"headers":[],"relativePath":"skills/reference/naming.md","filePath":"skills/reference/naming.md"}'),i={name:"skills/reference/naming.md"};function t(p,a,r,c,o,d){return s(),n("div",null,[...a[0]||(a[0]=[l(`<h1 id="skill-命名规范" tabindex="-1">Skill 命名规范 <a class="header-anchor" href="#skill-命名规范" aria-label="Permalink to &quot;Skill 命名规范&quot;">​</a></h1><p>这里放 skill 命名建议。</p><p>推荐：</p><ul><li>使用小写</li><li>使用短横线</li><li>名称表达任务，不表达情绪</li><li>高风险 skill 明确标识</li></ul><p>示例：</p><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>code-review</span></span>
+<span class="line"><span>security-review</span></span>
+<span class="line"><span>imagegen</span></span>
+<span class="line"><span>url-to-markdown</span></span>
+<span class="line"><span>lark-doc</span></span>
+<span class="line"><span>danger-live-debug</span></span></code></pre></div>`,6)])])}const m=e(i,[["render",t]]);export{k as __pageData,m as default};
