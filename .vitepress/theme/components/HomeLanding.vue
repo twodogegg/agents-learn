@@ -37,11 +37,6 @@ const routes = [
   { text: '配置 Workspace', link: '/workspace/overview' }
 ]
 
-const notes = [
-  'Prompt → Agent → Skill → MCP → Workspace',
-  'AGENTS.md、memory、roles 的职责边界',
-  '把一次性经验升级成可复用 workflow'
-]
 </script>
 
 <template>
@@ -94,14 +89,5 @@ const notes = [
       </div>
     </section>
 
-    <section class="home-section home-journal">
-      <div>
-        <p class="home-eyebrow">SAVE POINT</p>
-        <h2>不是堆资料，而是把做事方式存档</h2>
-      </div>
-      <ul>
-        <li v-for="note in notes" :key="note">{{ note }}</li>
-      </ul>
-    </section>
   </div>
 </template>

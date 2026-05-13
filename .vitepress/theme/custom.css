@@ -28,6 +28,9 @@
   --vp-button-alt-text: #17213f;
   --vp-button-alt-border: #17213f;
 
+  --vp-nav-screen-bg-color: #fff4c7;
+  --vp-local-nav-bg-color: #fff4c7;
+
   --vp-code-color: var(--pixel-blue-dark);
   --vp-code-bg: #ffe780;
   --vp-code-block-color: #17213f;
@@ -551,11 +554,27 @@ body::before {
 }
 
 .VPNavScreen {
-  background: var(--pixel-sand);
+  background: var(--pixel-sand) !important;
+  background-color: var(--pixel-sand) !important;
+}
+
+#VPNavScreen.VPNavScreen {
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.22) 0 5px, transparent 5px 14px),
+    var(--pixel-sand) !important;
+  background-color: var(--pixel-sand) !important;
+}
+
+.VPNavScreen .container,
+.VPNavScreen .content,
+.VPNavScreen .nav,
+.VPNavScreen .group {
+  background: var(--pixel-sand) !important;
 }
 
 .VPLocalNav {
-  background: var(--pixel-sand);
+  background: var(--pixel-sand) !important;
+  background-color: var(--pixel-sand) !important;
   border-bottom: 4px solid var(--pixel-ink);
 }
 
@@ -614,11 +633,68 @@ body::before {
 }
 
 .home-landing {
+  position: relative;
   min-height: 100vh;
   color: var(--pixel-ink);
   overflow: hidden;
+  isolation: isolate;
   background:
-    linear-gradient(180deg, #128cff 0 42%, #5ecbff 42% 58%, #65d447 58% 100%);
+    linear-gradient(180deg, #1594ff 0 0) 0 0 / 100% 340px no-repeat,
+    linear-gradient(180deg, #5fd4ff 0 0) 0 340px / 100% 118px no-repeat,
+    linear-gradient(180deg, #cbd7c4 0 0) 0 458px / 100% 360px no-repeat,
+    linear-gradient(180deg, #f3c96d 0 0) 0 818px / 100% calc(100% - 818px) no-repeat,
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 8px, transparent 8px 32px),
+    #f3c96d;
+}
+
+.home-landing::before,
+.home-landing::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+}
+
+.home-landing::before {
+  background:
+    linear-gradient(135deg, transparent 0 51%, #dff6ff 51% 64%, transparent 64%) 7% 300px / 150px 105px no-repeat,
+    linear-gradient(135deg, transparent 0 51%, #bfeeff 51% 64%, transparent 64%) 15% 336px / 170px 90px no-repeat,
+    linear-gradient(45deg, transparent 0 44%, #eaf9ff 44% 57%, transparent 57%) 28% 314px / 180px 105px no-repeat,
+    linear-gradient(45deg, transparent 0 44%, #c8f0ff 44% 57%, transparent 57%) 39% 344px / 150px 86px no-repeat,
+    linear-gradient(135deg, transparent 0 51%, #dff6ff 51% 64%, transparent 64%) 70% 300px / 170px 112px no-repeat,
+    linear-gradient(45deg, transparent 0 44%, #eaf9ff 44% 57%, transparent 57%) 82% 325px / 190px 108px no-repeat,
+    linear-gradient(#4aa8e9 0 0) 0 458px / 100% 62px no-repeat,
+    linear-gradient(135deg, transparent 0 24px, #3368bf 24px 80px, transparent 80px) 0 288px / 160px 95px repeat-x,
+    linear-gradient(135deg, transparent 0 18px, #7dc6ef 18px 62px, transparent 62px) 48px 322px / 132px 76px repeat-x,
+    radial-gradient(circle at 10% 92px, #fff 0 16px, transparent 17px),
+    radial-gradient(circle at 13% 92px, #fff 0 26px, transparent 27px),
+    radial-gradient(circle at 16% 94px, #fff 0 17px, transparent 18px),
+    radial-gradient(circle at 74% 128px, #fff 0 15px, transparent 16px),
+    radial-gradient(circle at 77% 126px, #fff 0 25px, transparent 26px),
+    radial-gradient(circle at 80% 130px, #fff 0 17px, transparent 18px),
+    radial-gradient(circle at 91% 76px, #fff 0 13px, transparent 14px),
+    radial-gradient(circle at 93% 76px, #fff 0 22px, transparent 23px),
+    radial-gradient(circle at 96% 78px, #fff 0 14px, transparent 15px);
+}
+
+.home-landing::after {
+  opacity: 0.98;
+  background:
+    linear-gradient(#9b8167 0 0) 16% 458px / 64px 360px no-repeat,
+    linear-gradient(#dbe2c8 0 0) 22% 458px / 42px 360px no-repeat,
+    linear-gradient(#9b8167 0 0) 60% 458px / 64px 360px no-repeat,
+    linear-gradient(#dbe2c8 0 0) 66% 458px / 42px 360px no-repeat,
+    repeating-linear-gradient(0deg, rgba(91, 105, 122, 0.2) 0 5px, transparent 5px 28px) 0 458px / 100% 360px no-repeat,
+    repeating-linear-gradient(90deg, rgba(91, 105, 122, 0.16) 0 5px, transparent 5px 32px) 0 458px / 100% 360px no-repeat,
+    linear-gradient(90deg, transparent 0 14%, #b7793b 14% 20%, #f5db8b 20% 24%, transparent 24% 58%, #b7793b 58% 64%, #f5db8b 64% 68%, transparent 68%) 0 818px / 100% calc(100% - 818px) no-repeat,
+    repeating-linear-gradient(0deg, rgba(150, 92, 48, 0.28) 0 8px, transparent 8px 28px) 0 818px / 100% calc(100% - 818px) no-repeat,
+    repeating-linear-gradient(90deg, rgba(150, 92, 48, 0.2) 0 8px, transparent 8px 32px) 0 818px / 100% calc(100% - 818px) no-repeat;
+}
+
+.home-landing > * {
+  position: relative;
+  z-index: 1;
 }
 
 .home-nav {
@@ -669,17 +745,13 @@ body::before {
 .home-hero-panel {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(430px, 0.72fr) minmax(520px, 1.28fr);
-  min-height: calc(100vh - 66px);
+  grid-template-columns: minmax(390px, 0.62fr) minmax(0, 1.18fr);
+  min-height: 0;
   align-items: center;
-  gap: clamp(24px, 4vw, 58px);
-  padding: clamp(38px, 5vw, 72px) clamp(20px, 5vw, 72px) 46px;
-  background:
-    radial-gradient(circle at 10% 18%, #fff 0 18px, transparent 19px),
-    radial-gradient(circle at 13% 18%, #fff 0 28px, transparent 29px),
-    radial-gradient(circle at 88% 20%, #fff 0 18px, transparent 19px),
-    radial-gradient(circle at 91% 20%, #fff 0 28px, transparent 29px),
-    linear-gradient(180deg, #128cff 0 54%, #5ecbff 54% 72%, #54c93f 72% 100%);
+  gap: clamp(20px, 3vw, 44px);
+  margin-top: 134px;
+  padding: clamp(30px, 3.8vw, 54px) clamp(20px, 5vw, 72px) 18px;
+  background: transparent;
 }
 
 .home-hero-copy {
@@ -755,15 +827,17 @@ body::before {
 .home-visual {
   position: relative;
   z-index: 1;
-  border: 6px solid var(--pixel-ink);
-  background: #071436;
-  box-shadow: 10px 10px 0 rgba(23, 33, 63, 0.26);
+  width: min(100%, 1020px);
+  align-self: start;
+  justify-self: center;
+  margin-top: -18px;
 }
 
 .home-visual img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
+  border: 4px solid var(--pixel-ink);
   object-fit: cover;
   image-rendering: auto;
 }
@@ -774,16 +848,16 @@ body::before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: min(1120px, calc(100% - 40px));
-  margin: -28px auto 0;
+  margin: 50px auto 0;
   border: 5px solid var(--pixel-ink);
   background: var(--pixel-sand);
   box-shadow: 8px 8px 0 rgba(23, 33, 63, 0.24);
 }
 
 .home-route-strip a {
-  min-height: 72px;
+  min-height: 56px;
   border-right: 4px solid var(--pixel-ink);
-  padding: 22px;
+  padding: 16px;
   color: var(--pixel-ink);
   font-weight: 950;
   text-align: center;
@@ -805,7 +879,7 @@ body::before {
 }
 
 .home-pillar-section {
-  padding: 76px 0 46px;
+  padding: 28px 0 34px;
 }
 
 .home-section-heading {
@@ -834,7 +908,7 @@ body::before {
 
 .home-pillar {
   display: flex;
-  min-height: 230px;
+  min-height: clamp(230px, 36vh, 340px);
   flex-direction: column;
   border: 5px solid var(--pixel-ink);
   padding: 22px;
@@ -900,6 +974,7 @@ body::before {
 @media (max-width: 960px) {
   .home-hero-panel {
     grid-template-columns: 1fr;
+    margin-top: 0;
     min-height: 0;
   }
 
@@ -917,10 +992,43 @@ body::before {
     padding: 28px 24px;
   }
 
+  .VPLocalNav {
+    padding: 8px 14px;
+  }
+
+  .VPLocalNav .container {
+    min-height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .VPLocalNav .menu {
+    min-height: 40px;
+    border-width: 3px;
+    padding: 7px 14px;
+    gap: 8px;
+    box-shadow: 3px 3px 0 rgba(23, 33, 63, 0.26);
+  }
+
+  .VPLocalNav .VPLocalNavOutlineDropdown button {
+    min-height: 40px;
+    padding: 0 10px;
+    box-shadow: 3px 3px 0 rgba(23, 33, 63, 0.26);
+  }
+
   .VPDoc .container {
-    width: min(760px, calc(100% - 32px));
-    margin: 36px auto 64px;
-    padding: 18px;
+    width: min(760px, calc(100% - 28px));
+    margin: 52px auto 64px !important;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .VPDoc .container::before {
+    top: -30px;
+    left: 18px;
   }
 }
 
@@ -983,14 +1091,11 @@ body::before {
 
   .VPDoc .container {
     width: calc(100% - 28px);
-    border: 0;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
+    margin-top: 52px !important;
   }
 
   .VPDoc .container::before {
-    top: -18px;
+    top: -30px;
     left: 18px;
   }
 
