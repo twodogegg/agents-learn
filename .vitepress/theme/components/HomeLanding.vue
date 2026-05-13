@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
 const { site } = useData()
 
@@ -42,12 +42,12 @@ const routes = [
 <template>
   <div class="home-landing">
     <header class="home-nav">
-      <a class="home-brand" href="/">{{ site.title }}</a>
+      <a class="home-brand" :href="withBase('/')">{{ site.title }}</a>
       <nav aria-label="首页导航">
-        <a href="/guide/overview">Guide</a>
-        <a href="/prompts/overview">Prompts</a>
-        <a href="/skills/overview">Skills</a>
-        <a href="/workspace/overview">Workspace</a>
+        <a :href="withBase('/guide/overview')">Guide</a>
+        <a :href="withBase('/prompts/overview')">Prompts</a>
+        <a :href="withBase('/skills/overview')">Skills</a>
+        <a :href="withBase('/workspace/overview')">Workspace</a>
       </nav>
     </header>
 
@@ -59,18 +59,18 @@ const routes = [
           用 8-bit 地图整理 prompts、skills、MCP 和 workspace，把零散经验升级成可复用的工作环境。
         </p>
         <div class="home-actions" aria-label="主要入口">
-          <a class="home-action primary" href="/guide/quick-start">START QUEST</a>
-          <a class="home-action secondary" href="/workspace/overview">BASE CAMP</a>
+          <a class="home-action primary" :href="withBase('/guide/quick-start')">START QUEST</a>
+          <a class="home-action secondary" :href="withBase('/workspace/overview')">BASE CAMP</a>
         </div>
       </div>
 
       <div class="home-visual" aria-label="像素风 Agent Workspace 信息图">
-        <img src="/images/pixel-agent-workspace-quest.png" alt="" />
+        <img :src="withBase('/images/pixel-agent-workspace-quest.png')" alt="" />
       </div>
     </section>
 
     <section class="home-route-strip" aria-label="推荐路线">
-      <a v-for="route in routes" :key="route.link" :href="route.link">
+      <a v-for="route in routes" :key="route.link" :href="withBase(route.link)">
         {{ route.text }}
       </a>
     </section>
@@ -81,7 +81,7 @@ const routes = [
         <h2>四个区域，一条升级路线</h2>
       </div>
       <div class="home-pillars">
-        <a v-for="pillar in pillars" :key="pillar.link" class="home-pillar" :href="pillar.link">
+        <a v-for="pillar in pillars" :key="pillar.link" class="home-pillar" :href="withBase(pillar.link)">
           <span>{{ pillar.kicker }}</span>
           <strong>{{ pillar.title }}</strong>
           <p>{{ pillar.text }}</p>
