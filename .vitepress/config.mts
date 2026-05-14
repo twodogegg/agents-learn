@@ -64,6 +64,8 @@ export default defineConfig({
           { text: 'Skill 是什么', link: '/skills/what-is-skill' },
           { text: 'Skill 结构', link: '/skills/anatomy' },
           { text: '创建 Skill', link: '/skills/create-skill' },
+          { text: '安装 Skill', link: '/skills/install' },
+          { text: 'Claude / Codex 插件安装', link: '/skills/claude-codex-install' },
           { text: '使用 Skill', link: '/skills/use-skill' },
           { text: '分类总览', link: '/skills/categories/overview' },
           {
@@ -81,25 +83,6 @@ export default defineConfig({
               { text: 'Dangerous / Experimental', link: '/skills/categories/dangerous' }
             ]
           },
-          {
-            text: '示例',
-            items: [
-              { text: 'Simple Skill', link: '/skills/examples/simple-skill' },
-              { text: 'Coding Review', link: '/skills/examples/coding-review-skill' },
-              { text: 'Imagegen', link: '/skills/examples/imagegen-skill' },
-              { text: 'Lark', link: '/skills/examples/lark-skill' },
-              { text: 'MCP', link: '/skills/examples/mcp-skill' }
-            ]
-          },
-          {
-            text: '参考',
-            items: [
-              { text: 'Metadata', link: '/skills/reference/metadata' },
-              { text: '目录结构', link: '/skills/reference/directory-structure' },
-              { text: '命名规范', link: '/skills/reference/naming' },
-              { text: '检查清单', link: '/skills/reference/checklist' }
-            ]
-          }
         ]
       },
       {
@@ -141,6 +124,7 @@ export default defineConfig({
         items: [
           { text: '术语表', link: '/reference/glossary' },
           { text: 'AGENTS.md 参考', link: '/reference/agents-md' },
+          { text: 'Codex 配置参考', link: '/reference/codex-config' },
           { text: '配置字段参考', link: '/reference/config-fields' }
         ]
       },

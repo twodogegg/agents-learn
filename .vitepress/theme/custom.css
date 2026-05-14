@@ -350,10 +350,10 @@ body::before {
 .vp-doc div[class*="language-"]::after {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1;
+  border-right: 3px solid var(--pixel-ink);
   border-bottom: 3px solid var(--pixel-ink);
-  border-left: 3px solid var(--pixel-ink);
   padding: 4px 8px;
   color: var(--pixel-ink);
   font-size: 11px;
@@ -363,7 +363,7 @@ body::before {
 }
 
 .vp-doc div[class*="language-"] pre {
-  padding: 22px 0;
+  padding: 36px 0 22px;
   color: var(--vp-code-block-color);
   background: transparent !important;
 }
