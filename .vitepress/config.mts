@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.SITE_BASE || '/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "agents-learn",
   description: "我的agents笔记",
-  base: '/',
+  base,
   srcDir: './docs',
   appearance: false,
   themeConfig: {
