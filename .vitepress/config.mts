@@ -118,7 +118,8 @@ export default defineConfig({
           { text: 'Research Workspace', link: '/recipes/research-workspace' },
           { text: 'Review Workspace', link: '/recipes/review-workspace' },
           { text: 'Imagegen Workspace', link: '/recipes/imagegen-workspace' },
-          { text: 'Team Workspace', link: '/recipes/team-workspace' }
+          { text: 'Team Workspace', link: '/recipes/team-workspace' },
+          { text: 'AI 开发网页流程', link: '/recipes/ai-web-development' }
         ]
       },
       {
