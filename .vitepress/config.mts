@@ -1,9 +1,19 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
+import path from 'node:path'
 
 const base = process.env.SITE_BASE || '/'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  transformPageData(pageData, { siteConfig }) {
+    const filePath = path.resolve(siteConfig.srcDir, pageData.relativePath)
+    try {
+      const raw = fs.readFileSync(filePath, 'utf-8')
+      const content = raw.replace(/^---[\s\S]*?---\n*/, '')
+      pageData.frontmatter.rawMarkdown = content
+    } catch {}
+  },
   title: "agents-learn",
   description: "我的agents笔记",
   base,

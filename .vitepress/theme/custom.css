@@ -1183,3 +1183,42 @@ body::before {
   color: #54c93f;
   font-weight: 900;
 }
+
+/* Copy Markdown Button */
+.copy-md-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.1s;
+  image-rendering: pixelated;
+}
+
+.copy-md-btn:hover {
+  transform: scale(1.1);
+}
+
+.copy-md-btn:active,
+.copy-md-btn.copied {
+  transform: scale(0.9);
+}
+
+.copy-md-icon {
+  width: 36px;
+  height: 36px;
+  image-rendering: pixelated;
+}
+
+.VPDoc .container {
+  position: relative;
+}
